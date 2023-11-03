@@ -300,11 +300,6 @@ public class CosineSimilarity {
                 }
                 System.out.println("\n");
             }
-//            ArrayList<Double>r1=new ArrayList<>();
-//            ArrayList<Double>r2=new ArrayList<>();
-//            ArrayList<Double>r3=new ArrayList<>();
-//            ArrayList<Double>r4=new ArrayList<>();
-//            ArrayList<Double>r5=new ArrayList<>();
             //declaring a ArrayList of Integer to store the cosine similarity
             ArrayList<Double>cosSim=new ArrayList<>();
             for(int i=0;i<5;i++)
@@ -320,10 +315,6 @@ public class CosineSimilarity {
                     
                 }
             }
-//            for(int i=0;i<cosSim.size();i++)
-//            {
-//                System.out.print(cosSim.get(i)+" ");
-//            }
             Map<String,Integer>result=new LinkedHashMap<>();
             int number=0;
             for(int i=0;i<5;i++)
@@ -345,12 +336,6 @@ public class CosineSimilarity {
             System.out.println("Enter the query");
             String QueryString=sc.nextLine();
             String[] query=QueryString.split(" ");
-//            Map<String, Integer>countQuery = new HashMap<String, Integer>();
-//            for (String val : query) 
-//            {
-//                Integer j = countQuery.get(val);
-//                countQuery.put(val, (j == null) ? 1 : j + 1);
-//            }
             ArrayList<Double> queryVector=new ArrayList<>();
             for(String str:query)
             {
@@ -371,10 +356,6 @@ public class CosineSimilarity {
                 result1.put(cosSimqueryDoc,i);
             }
             Collections.sort(result2, Collections.reverseOrder());
-//            for(int i=0;i<result2.size();i++)
-//            {
-//                System.out.println(result2.get(i));
-//            }
             System.out.println("The query is most relevant to doc "+result1.get(result2.get(1)));
             sc.close();
             

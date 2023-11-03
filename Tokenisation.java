@@ -9,7 +9,7 @@ public class Tokenisation
 {
     public static void main(String[] args) throws IOException {
 	Scanner sc=new Scanner(System.in);
-	FileInputStream f = new FileInputStream("C:\\Users\\hp\\OneDrive\\Desktop\\Document_List_IR\\Assign1.txt");
+	FileInputStream f = new FileInputStream("C:\\Users\\hp\\OneDrive\\Desktop\\Information retrieval\\Document_List_IR\\Assign1.txt");
 	StringBuffer sb= new StringBuffer("");
 	int i=0;
 	while((i=f.read())!=-1)
@@ -19,15 +19,15 @@ public class Tokenisation
 	String s= sb.toString();
 	String[] st=s.split(" ");
 	displayFile(st);
-        System.out.println("--------------------------------------------");
+    System.out.println("--------------------------------------------");
 	String t[]=remove(st);
 	displayFile(t);
-        System.out.println("--------------------------------------------");
+    System.out.println("--------------------------------------------");
 	ArrayList<String> arr1=new ArrayList<String>();	
 	for(String x:st)
 	{
 		arr1.add(x);
-        }
+    }
 	countFrequency(arr1);
 	System.out.println("Enter the value of n:");
 	int n=sc.nextInt();
